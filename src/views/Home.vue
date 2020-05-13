@@ -1,27 +1,36 @@
 <template>
   <div class="home">
-  <h1>Liste des lectures</h1>
+    <p class="welcome"> IReader, Manage your readings </p>
+  <h1>Liste de tes lectures</h1>
   <p>
-    <button type="submit"><router-link to="/newreading">nouvelle serie</router-link></button>
+    <button class="ajout" type="submit"><router-link to="/newreading">Ajouter un livre</router-link></button>
   </p>
     
-  <table>
+  <table class="tableau">
                       <tr>
                         <th>Titre</th>
                         <th>Auteur</th>
                         <th>Publication</th>
                         <th>Pages</th>
                         <th>Statut </th>
-                        <th><img src="https://www.cjoint.com/doc/20_04/JDCkQDlcxGV_pngguru.com-1-.png"></th></tr>               
- <tr v-for="readingg in reading" :key="readingg.reading">
+                        <th><img src="https://www.cjoint.com/doc/20_05/JEnmMh2bd4G_settings.png" class="setting"></th></tr>               
+ <tr v-for="readingg in reading" :key="readingg.reading"> <!--v-for: boucle-->
  
-  <td>{{readingg.Bookname}}</td>
+  <td style="background-color:#c5fcd6">{{readingg.Bookname}}</td>
   <td>{{readingg.Author}}</td>
   <td>{{readingg.Publication}}</td>
   <td>{{readingg.Pages}}</td>
   <td>{{readingg.Statut}}</td>
-  <td > <form v-bind:readingg="readingg"><router-link :to="{ name: 'deletereading', params: { ReadingID: readingg.ReadingID }}"><input src="kisspng-button-computer-icons-.png" type="image"></router-link></form>
-  <button><Reading v-bind:readingg="readingg" @event_update="updatereading" ><input src="bouton-modifier.png" type="image"></Reading></button>
+  <td > 
+    <form v-bind:readingg="readingg">
+      <router-link :to="{ name: 'deletereading', params: { ReadingID: readingg.ReadingID }}">
+      <input src="https://www.cjoint.com/doc/20_05/JEnmzN7OHJG_poubelle.png" type="image">
+    </router-link>
+    </form>
+  <button><Reading v-bind:readingg="readingg" @event_update="updatereading" > <!--vbind: attributs-->
+    <input src="bouton-modifier.png" type="image">
+    </Reading>
+  </button>
   </td> 
   </tr>
 
@@ -31,7 +40,7 @@
 
 <script>
 // @ is an alias to /src
-import axios from "axios";
+import axios from "axios"; //pour accéder à l'API
 import Reading from "./updatereading.vue";
 export default {
   name: 'home',
@@ -85,20 +94,24 @@ export default {
      }
 }
 </script>
+
+
+
 <style scoped>
+
 .home{
   color:black;
 }
 th{
   text-align: center;
-  border : solid 1px;
+  background-color:darkseagreen;
 }
 tr{
-  border : solid 1px;
+  letter-spacing: 2px;
 }
-td{
+/* td{
   border : solid 1px;
-}
+} */
 input[type='image'] {
     width: 20px;
 }
@@ -109,5 +122,47 @@ height: 20px;
 p{
   text-align: right;
   margin-right: 5px;
+}
+
+.ajout
+{
+  background-color:black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-content: space-between;
+  margin-left: 550px;
+  font-size: 16px;
+  
+
+}
+
+.ajout:hover
+{
+  color: white;
+	background-color:#ceebd7;
+	transition: 0.6s all; 
+}
+
+.tableau
+{
+  display: inline-block;
+  float:center;
+}
+
+.setting
+{
+  width: 30px;
+  height: 30px;
+}
+
+.welcome
+{
+  text-align: center;
+  font-size: 50px;
+  padding-top:0;
+  background-color: #e0ffe4;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="reading">   
-        <button class="modif" v-on:click="showInput = true" v-if="! showInput" >Modifier</button>
+        <button class="modif" v-on:click="showInput = true" v-if="! showInput">Modifier</button>
     <div v-if="showInput"> 
             <input type="text" v-model="readingg.Bookname">
             <input type="text" v-model="readingg.Author">

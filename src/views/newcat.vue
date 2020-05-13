@@ -1,6 +1,6 @@
 <template>
   <div class="newcat">
-    <h1>Ajouter une nouvelle catégorie</h1>
+    <h1 style="color:black">Ajoute une nouvelle catégorie</h1>
        <table>
         <tr>
             <th>1</th>
@@ -15,11 +15,12 @@
             <td>Drama</td>
         </tr>
     </table>
+    <div class="formulaire">
 <p> CatégorieID <input type="int" v-model="catégorie.CatégorieID"></p>
-<p>  Catégorie Name  <input type="text" v-model="catégorie.CatName"></p>
-<p><button v-on:click="createcat">Ajouter</button>
+<p>  Catégorie Name  <input type="text" v-model="catégorie.CatName"></p> </div>
+<p><button v-on:click="createcat" class="add">Ajouter</button>
    </p>
-
+  <img src="https://www.cjoint.com/doc/20_05/JEnnfY4P6xG_books.jpg">
   </div>
 </template>
 <script>
@@ -54,7 +55,7 @@ export default {
 <style scoped>
 p{
   font-family: Arial, Helvetica, sans-serif;
-  color : white;
+  color : black;
 }
 table
 {
@@ -63,5 +64,34 @@ margin: auto;
 td
 {
 text-align :center;
+}
+
+.formulaire
+{
+        background-color: #E0E0E0;
+        width:25%;
+        text-align:justificy;
+        border-width: 2px;
+        border-style: groove;
+        border-image: initial;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 480px;
+        margin-top: 35px;
+        border-radius: 3px 3px 3px;
+}
+
+input
+{
+          border-radius: 3px 3px 3px;
+}
+
+.add
+{
+          border-radius: 12px;
+        background-color: black;
+        border: white;
+        color: white;
+        font-family: Georgia;
+        font-size: 18px;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="deletereading">
-    <h1>Supprimer le livre?</h1>
+    <h1 style="color:black">Supprimer le livre?</h1>
 
-    <button v-on:click="deletereading(idreading)">Effacer</button>
+    <button v-on:click="deletereading(idreading)" class="add">Effacer</button>
   </div>
 </template>
 <script>
@@ -46,5 +46,15 @@ margin: auto;
 td
 {
 text-align :center;
+}
+
+.add
+{
+  border-radius: 12px;
+  background-color: black;
+  border: white;
+  color: white;
+  font-family: Georgia;
+  font-size: 18px;
 }
 </style>

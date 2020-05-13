@@ -3,21 +3,22 @@
   <h1>Liste des livres par catégorie</h1>
 
   
-    <p><button type="submit"><router-link to="/newcat">nouvelle catégorie</router-link>
+    <p><button class="ajout" type="submit"><router-link to="/newcat">Ajouter une catégorie</router-link>
     </button></p>
     
-  <table>
+  <table style="width:700px">
                       <tr>
-                        <th>Nom Cat</th> 
+                        <th>Catégorie</th> 
                         <th>Titre</th>  
                         <th>Statut</th> 
                       </tr>      
 <tr v-for="categorie in catégorie" :key="categorie.catégorie">
-  <td>{{categorie.category}}</td>
-  <td>{{categorie.nom}}</td>
+  <td style="background-color:#c5fcd6">{{categorie.category}}</td>
+  <td style="font-weight:bold">{{categorie.nom}}</td>
    <td>{{categorie.statut}}</td>
 </tr>
   </table>
+      <img src="https://www.cjoint.com/doc/20_05/JEnnfY4P6xG_books.jpg">
   </div>
 </template>
 
@@ -49,18 +50,18 @@ export default {
 </script>
 <style scoped>
 .home{
-  color:white;
+  color:black;
 }
 th{
   text-align: center;
-  border : solid 1px;
+  background-color:darkseagreen;
 }
 tr{
-  border : solid 1px;
+  letter-spacing: 2px;
 }
-td{
+/* td{
   border : solid 1px;
-}
+} */
 input[type='image'] {
     width: 20px;
 }
@@ -106,4 +107,27 @@ ul li a:hover {
  background-color:#D3D3D3;
  border-color:#696969 #DCDCDC #DCDCDC #696969;
  } 
+
+
+.ajout
+{
+  background-color:black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-content: space-between;
+  margin-left: 530px;
+  font-size: 16px;
+  
+
+}
+
+.ajout:hover
+{
+  color: white;
+	background-color:#ceebd7;
+	transition: 0.6s all; 
+}
 </style>

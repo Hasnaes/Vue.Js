@@ -1,9 +1,12 @@
 <template>
   <div v-bind:class="cssClass" id="app">
-    <div id="nav">
-      <router-link to="/"><span @click="cssClass = 'green'">Home</span></router-link>
-      <span>|</span>
-      <router-link to="/categorie"><span @click="cssClass = 'blue'">Catégorie</span></router-link>
+    <div id="nav" style="background-color:#ceebd7; height:400px">
+      <router-link to="/">
+        <img src="https://www.cjoint.com/doc/20_05/JEnmOrJAasG_maison.png" class="maison"></router-link> <!--home-->
+        <span>|</span>
+      <router-link to="/categorie"> 
+      <img src="https://www.cjoint.com/doc/20_05/JEnmRNw6WnG_cat%C3%A9gorie.png" class="caté">
+      </router-link>
 
     </div>
     <transition name="fade">
@@ -31,7 +34,6 @@ html{
 .green #nav a {
   color: rgb(80,145,45);
 }
-
 .green #nav a.router-link-exact-active {
   color: rgb(110, 175, 75);
 }
@@ -128,5 +130,17 @@ body{
     transform: scale(0);
     opacity: 0;
   }
+}
+
+.maison
+{
+  width:50px;
+  height:50px;
+}
+
+.caté
+{
+  width:50px;
+  height:50px;
 }
 </style>
