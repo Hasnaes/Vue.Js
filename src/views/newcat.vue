@@ -2,21 +2,21 @@
   <div class="newcat">
     <h1 style="color:black">Ajoute une nouvelle catégorie</h1>
        <table>
-        <tr>
+        <tr style="color:black"> <p style="font-weight:bold"> Existantes: </p>
             <th>1</th>
-            <td>Action</td>
+            <td>Roman</td>
             <th>2</th>
-            <td>Aventure</td>
+            <td>Religion</td>
             <th>3</th>
-            <td>Comédie</td>
+            <td>Politique</td>
             <th>4</th>
-            <td>Horreur</td>
-            <th>5</th>
-            <td>Drama</td>
+            <td>Histoire</td>
+            <th>6</th>
+            <td>Policier</td>
         </tr>
     </table>
     <div class="formulaire">
-<p> CatégorieID <input type="int" v-model="catégorie.CatégorieID"></p>
+<p> Catégorie ID <input type="int" v-model="catégorie.CatégorieID"></p>
 <p>  Catégorie Name  <input type="text" v-model="catégorie.CatName"></p> </div>
 <p><button v-on:click="createcat" class="add">Ajouter</button>
    </p>

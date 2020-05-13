@@ -3,6 +3,7 @@
     <h1 style="color:black">Supprimer le livre?</h1>
 
     <button v-on:click="deletereading(idreading)" class="add">Effacer</button>
+        <img src="https://www.cjoint.com/doc/20_05/JEnnfY4P6xG_books.jpg">
   </div>
 </template>
 <script>

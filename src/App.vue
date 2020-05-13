@@ -1,4 +1,4 @@
-<template>
+<template><!--parent-->
   <div v-bind:class="cssClass" id="app">
     <div id="nav" style="background-color:#ceebd7; height:400px">
       <router-link to="/">

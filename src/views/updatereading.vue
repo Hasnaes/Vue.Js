@@ -10,17 +10,17 @@
             <input type="number" v-model="readingg.FK_CatégorieID">
    <button v-on:click="updatereadingee(readingg)">Sauver</button>
        <table>
-        <tr>
+        <tr style="color:black"> <p style="font-weight:bold; color:black"> Existantes: </p>
             <th>1</th>
-            <td>Action</td>
+            <td>Roman</td>
             <th>2</th>
-            <td>Aventure</td>
+            <td>Religion</td>
             <th>3</th>
-            <td>Comédie</td>
+            <td>Politique</td>
             <th>4</th>
-            <td>Horreur</td>
-            <th>5</th>
-            <td>Drama</td>
+            <td>Histoire</td>
+            <th>6</th>
+            <td>Policier</td>
         </tr>
     </table>
         </div>
@@ -31,7 +31,7 @@
 <script>
     export default {
         name: "Reading",
-        props:['readingg'],
+        props:['readingg'], // livre concerné par la modification
         data() {
             return {
               showInput:false
