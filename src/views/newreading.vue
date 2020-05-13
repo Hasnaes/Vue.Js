@@ -9,7 +9,7 @@
 <p>  Publication <input type="int" v-model="readingg.Publication"></p>
 <p>  Pages <input type="int" v-model="readingg.Pages"></p>
 <p> CatégorieID <input type="int" v-model="readingg.FK_CatégorieID"></p>
-        <tr style="color:black"> <p style="font-weight:bold"> Existantes: </p> </br>
+        <tr style="color:black"> <p style="font-weight:bold"> Existantes: </p>
             <th>1</th>
             <td>Roman</td>
             <th>2</th>

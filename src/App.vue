@@ -2,7 +2,7 @@
   <div v-bind:class="cssClass" id="app">
     <div id="nav" style="background-color:#ceebd7; height:400px">
       <router-link to="/">
-        <img src="https://www.cjoint.com/doc/20_05/JEnmOrJAasG_maison.png" class="maison"></router-link> <!--home-->
+        <img src="https://www.cjoint.com/doc/20_05/JEnmOrJAasG_maison.png" class="maison" ></router-link> <!--home-->
         <span>|</span>
       <router-link to="/categorie"> 
       <img src="https://www.cjoint.com/doc/20_05/JEnmRNw6WnG_cat%C3%A9gorie.png" class="caté">
@@ -134,13 +134,25 @@ body{
 
 .maison
 {
-  width:50px;
-  height:50px;
+  width:70px;
+  height:70px;
+}
+
+.maison:hover
+{
+  opacity: .5;
 }
 
 .caté
 {
-  width:50px;
-  height:50px;
+  width:70px;
+  height:70px;
 }
+
+.caté:hover
+{
+    opacity: .5;
+}
+
+
 </style>

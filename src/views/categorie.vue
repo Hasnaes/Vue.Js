@@ -111,7 +111,7 @@ ul li a:hover {
 
 .ajout
 {
-  background-color:black;
+  background-color:#ceebd7;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -127,7 +127,7 @@ ul li a:hover {
 .ajout:hover
 {
   color: white;
-	background-color:#ceebd7;
+	background-color:black;
 	transition: 0.6s all; 
 }
 </style>
