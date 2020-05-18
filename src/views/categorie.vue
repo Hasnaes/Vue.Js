@@ -3,19 +3,19 @@
   <h1>Liste des livres par catégorie</h1>
 
   
-    <p><button class="ajout" type="submit"><router-link to="/newcat">Ajouter une catégorie</router-link>
+    <p><button class="ajout" type="submit"><router-link to="/newcat" style="text-decoration:none; color:black">Ajouter une catégorie</router-link>
     </button></p>
     
-  <table style="width:700px">
+  <table class="table-responsive">
                       <tr>
                         <th>Catégorie</th> 
                         <th>Titre</th>  
                         <th>Statut</th> 
                       </tr>      
 <tr v-for="categorie in catégorie" :key="categorie.catégorie">
-  <td style="background-color:#c5fcd6">{{categorie.category}}</td>
-  <td style="font-weight:bold">{{categorie.nom}}</td>
-   <td>{{categorie.statut}}</td>
+  <td data-label="Catégorie" style="background-color:#c5fcd6">{{categorie.category}}</td>
+  <td data-label="Titre" style="font-weight:bold">{{categorie.nom}}</td>
+   <td data-label="Statut">{{categorie.statut}}</td>
 </tr>
   </table>
       <img src="https://www.cjoint.com/doc/20_05/JEnnfY4P6xG_books.jpg">
@@ -52,6 +52,7 @@ export default {
 .home{
   color:black;
 }
+
 th{
   text-align: center;
   background-color:darkseagreen;
@@ -76,6 +77,7 @@ p{
 table
 {
 margin: auto;
+width:700px;
 }
 td
 {
@@ -100,7 +102,7 @@ ul li a {
  text-align:center;
  padding:5px;
  border:2px solid;
- /*pour avoir un effet "outset" avec IE :*/
+ /*pour avoir un effet outset avec IE :*/
  border-color:#DCDCDC #696969 #696969 #DCDCDC;
  }
 ul li a:hover {
@@ -130,4 +132,67 @@ ul li a:hover {
 	background-color:black;
 	transition: 0.6s all; 
 }
+
+/*Tableau responsive*/
+    @media only screen and (max-width: 500px)
+    {
+
+        table{
+          margin-left: 0;
+          padding-left: 0;
+          width: 100%;
+        }
+
+        .ajout{
+            margin-left: 120px;
+        }
+        .table-responsive table, 
+        .table-responsive thead, 
+        .table-responsive tbody, 
+        .table-responsive tr, 
+        .table-responsive th, 
+        .table-responsive td {
+            display:block;
+            margin-left:0;
+        }
+
+        .table-responsive table{
+            width:100%;
+        }
+        .table-responsive th{
+            display:none;
+        }
+
+        .table-responsive td{
+            padding-left: 200px;
+            position: relative;
+            margin-top: -1;
+        }
+
+        .table-responsive td:before{
+            padding: 5px;
+            content:attr(data-label);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .table-responsive tr {
+            margin-bottom: 1rem;
+        }
+
+        img{
+          margin-left: 0;
+          padding-left: 0;
+          width: 300px;
+          height:200px;
+        }
+    }
 </style>

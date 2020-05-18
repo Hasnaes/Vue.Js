@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Home from './views/Home.vue'; //import des composants
 import newreading from './views/newreading.vue'
 import updatereading from './views/updatereading.vue'
 import deletereading from './views/deletereading.vue'
@@ -13,7 +13,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
+  routes: [ //chaque route contient un objet qui a pour params path, name et component
     {
       path: '/',
       name: 'home',

@@ -11,7 +11,7 @@ export default {
   name: 'deletereading',
     data() {
       return{
-        idreading:0,
+        idreading:0, 
         url:"http://localhost:8000/Api/deletereading/"
       }
      },
@@ -27,10 +27,10 @@ export default {
              console.log(error);
          })
          
-         this.$router.push({name : "home"})
+         this.$router.push({name : "home"}) 
        }
      } ,
-     created(){
+     created(){ 
        this.idreading=this.$route.params.ReadingID; // définition du idreading qui correspond au ReadingID qui apparait dans la route
      }
 };

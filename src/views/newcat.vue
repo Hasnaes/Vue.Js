@@ -16,7 +16,7 @@
         </tr>
     </table>
     <div class="formulaire">
-<p> Catégorie ID <input type="int" v-model="catégorie.CatégorieID"></p>
+<p> Catégorie ID <input type="int" v-model="catégorie.CatégorieID"></p> <!-- liaisons données bidirectionnelle-->
 <p>  Catégorie Name  <input type="text" v-model="catégorie.CatName"></p> </div>
 <p><button v-on:click="createcat" class="add">Ajouter</button>
    </p>
@@ -36,7 +36,7 @@ export default {
       }
      },
      methods: {
-     createcat() {
+     createcat() { //récupération de la valeur du composant 
          axios
          .post(this.url, this.catégorie)
          .then((response) => {

@@ -22,7 +22,7 @@
             <td>Policier</td>
         </tr>
 </div>
-<p style="color:black"><button v-on:click="createreading" class="add">Ajouter</button>
+<p style="color:black"><button v-on:click="createreading" class="add">Ajouter</button> <!--envoie vers la method-->
    </p>
   <img src="https://www.cjoint.com/doc/20_05/JEnnfY4P6xG_books.jpg">
   </div>
@@ -43,19 +43,19 @@ export default {
       }
      },
      methods: {
-     createreading() {
+     createreading() { //event created, récupération de la valeur dans composant
          axios
-         .post(this.url, this.readingg)
+         .post(this.url, this.readingg) //récupérer l'URL+ lecture ajoutée
          .then((response) => {
-             this.readingg = response.data.readingg;
-             console.log(this.reading);
-                this.get_readingList();
+             this.readingg = response.data.readingg; //envoyée comme réponses données liées à lecture ajoutée
+             console.log(this.reading); 
+                this.get_readingList(); //affichage direct dans liste
           
          })
          .catch((error) => {
              console.log(error);
          })
-         this.$router.push({name : "home"})
+         this.$router.push({name : "home"}) // retour vers route de la page principale ayant nom 'home'
      }
      }, 
 };
